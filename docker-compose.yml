@@ -2,7 +2,6 @@ version: "3.7"
 services:
   robust.cdn:
     image: "ghcr.io/thetastation/robust.cdn-dockerized:main"
-    build: .
     container_name: robustcdn
     volumes:
       - ./appsettings.json:/app/appsettings.json
