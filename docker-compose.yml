@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  robust.cdn:
+    image: "ghcr.io/thetastation/robustcdn-dockerized:main"
+    build: .
+    container_name: robustcdn
+    volumes:
+      - ./appsettings.json:/app/appsettings.json
+      - ./builds:/app/builds
+    ports:
+      - "${APP_PORT}:5000"
