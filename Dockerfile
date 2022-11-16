@@ -13,7 +13,7 @@ WORKDIR /source/Robust.Cdn/
 RUN dotnet publish -c release -r linux-x64 -o /app --no-self-contained --no-restore
 
 # final stage/image
-FROM mcr.microsoft.com/dotnet/sdk:6.0
+FROM mcr.microsoft.com/dotnet/aspnet:6.0
 
 
 WORKDIR /app
